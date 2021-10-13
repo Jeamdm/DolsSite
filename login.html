@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<title>Log inDalmanolstore</title>
+	<link rel="stylesheet" type="text/css" href="test.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    	
+    	<div class="container">
+		<div class="navbar">
+		<div class="logo">
+			<a href="index.html"><img src="blacklogo.png" width="150px"></a>
+		</div>
+		<nav>
+			<ul id="menuitems">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="product.html">Product</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="login.html">Account</a></li>
+			</ul>
+		</nav>
+		<a href="addtocart.html"><img src="cart.png" width="30px" height="30px"></a>
+		<img src="menu.png" class="menu-icon" width="35px" height="35spx" sonclick="menutoggle()">
+	</div>
+</div>	
+
+<!-------account ni siya nga side-------->
+<div class="account">
+	<div class="container">
+		<div class="row">
+			<div class="col-2">
+				<img src="save3.png" width="790">
+			</div>
+			<div class="col-2">
+				<div class="form-container">	
+					<div class="form-btn">
+						<span onclick="Login()">Login</span>
+						<span onclick="Register()">Register</span>
+						<hr id="indicator">
+					</div>
+					<form id="LoginForm">
+						<input type="text" placeholder="Username">
+						<input type="Password" placeholder="Password">
+						<button type="Submit" class="btn">Login</button>
+						<a href="">Forgot Password</a>
+					</form>
+					<form id="Registerform">
+						<input type="text" placeholder="Username">
+						<input type="email" placeholder="Email">
+						<input type="Password" placeholder="Password">
+						<button type="Submit" class="btn">Register</button>
+					</form>
+				</div>
+			</div>
+			
+
+			
+		</div>
+		
+	</div>
+	
+</div> 
+
+
+
+<!---------footer-------->
+
+<div class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="footer-col-1">
+				<h3>Download App</h3>
+				<p>Download App for Android and ios Mobile phone.</p>
+				<div class="App-logo">
+					<img src="appstore.png">
+					<img src="google.png">
+				</div>
+			</div>
+			<div class="footer-col-2">
+				<img src="whitelogo.png">
+				<p>Our purpose is the fulfillment of the customer needs, and to promote our good quality prouduct and services</b></p>
+			</div>
+			<div class="footer-col-3">
+				<h3>Customer Care</h3>
+				<ul>
+					<li>Help Center</li>
+					<li>How to buy</li>
+					<li>Return Policy</li>
+					<li>Shipping/Delivery</li>
+				</ul>
+			</div>
+			<div class="footer-col-4">
+				<h3>Follow us</h3>
+				<ul>
+					<li>Facebook</li>
+					<li>Youtube</li>
+					<li>Twitter</li>
+					<li>Instagram</li>
+				</ul>
+			</div>
+		</div>
+		<hr>
+		<p class="Copyright">Copyright 2021- Jeam Legaspi Dalman</p>
+	</div>
+</div>
+
+<!-----------toggle menu---------->
+<script>
+	var menuitems= document.getElementById("menuitems");
+
+	menuitems.style.maxHeight = "0px";
+	function menutoggle(){
+		if(menuitems.style.maxHeight == "0px";)
+		{
+			menuitems.style.maxHeight = "200px";
+		}
+		else
+		{
+			menuitems.style.maxHeight = "0px";
+		}
+	}
+</script>
+
+<!---------------------------login-------------------------->
+
+<script>
+	var LoginForm = document.getElementById("LoginForm");
+	var Registerform = document.getElementById("Registerform");
+	var indicator = document.getElementById("indicator");
+
+	function Register(){
+		Registerform.style.transform = "tranlateX(0px)";
+		LoginForm.style.transform = "tranlateX(0px)";
+		indicator.style.transform = "tranlateX(300px)";
+	}
+	function Login(){
+		Registerform.style.transform = "tranlateX(300px)";
+		LoginForm.style.transform = "tranlateX(300px)";
+		indicator.style.transform = "tranlateX(0px)";
+
+	}
+</script>
+
+</body>
+</html>
